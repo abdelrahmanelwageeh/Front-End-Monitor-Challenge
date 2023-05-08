@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+  background-color: hsl(210, 46%, 95%);
+}
+.container {
+  box-sizing: border-box;
+  padding: 100px 150px;
+  max-height: calc(100vh - 15px);
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "daniel daniel daniel daniel daniel daniel jonathen jonathen kira kira "
+    "jeanette jeanette  patrick patrick patrick patrick patrick patrick  kira kira ";
+  gap: 30px;
+}
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container div {
+    padding: 10px 25px 5px;
+    border-radius: 10px;
+  }
+}
+.container div {
+  padding: 10px 25px 5px;
+  border-radius: 10px;
+}
+.container div .info {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.container div .words h4 {
+  margin: 0 auto 15px;
+  font-size: 20px;
+  z-index: 2;
+  position: relative;
+}
+.container div .words p {
+  color: hsl(0, 0%, 81%);
+  line-height: 1.5;
+}
+.container div .info .name p {
+  color: hsl(0, 0%, 81%);
+}
+.container div .info img {
+  border-radius: 50%;
+  border: 4px solid #a079d9;
+  width: 35px;
+}
+.container .kira .words p,
+.container .jeanette .words p {
+  color: #a1a4a9;
+}
+.daniel {
+  position: relative;
+  grid-area: daniel;
+  color: white;
+  background-color: hsl(263, 55%, 52%);
+}
+.daniel::before {
+  font-family: Arial, Helvetica, sans-serif;
+  content: "“";
+  position: absolute;
+  top: -71px;
+  right: 85px;
+  font-size: 400px;
+  color: #a775f2;
+}
+.jonathen {
+  grid-area: jonathen;
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+.kira {
+  grid-area: kira;
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+}
+.jeanette {
+  grid-area: jeanette;
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+}
+.patrick {
+  color: white;
+  grid-area: patrick;
+  background-color: hsl(219, 29%, 14%);
+}
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    min-height: 100vh;
+  }
+  .container div {
+    padding: 15px;
+  }
+  .daniel::before {
+    top: -93px;
+    right: -10px;
+    font-size: 498px;
+  }
+  .kira {
+    order: 5;
+  }
+  .attribution {
+    position: absolute;
+    bottom: -1450px;
+    left: 18%;
+    transform: translate( 0%, 0%);
+  }
+}
+
+/* .daniel {
+  padding: 10px;
+  width: 40%;
+  border-radius: 10px;
+  padding: 30px;
+}
+.daniel .info {
+  display: flex;
+}
+.daniel .info img {
+  border-radius: 50%;
+  margin: 25px;
+} */
